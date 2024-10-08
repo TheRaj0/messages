@@ -18,7 +18,11 @@ const useConversation = () => {
             }
             setConversations(data);
         }).catch(error => {
-            if(error.response.data.error === "Unauthorized. NO TOKEN PROVIED!") 
+            if(error.response.data.error === "Unauthorized. NO TOKEN PROVIED!")
+            {
+                localStorage.removeItem("user")
+                document.location.reload()
+            }
             toast.error(error.response.data.error);
         }).finally(() => {
             setLoading(false);
