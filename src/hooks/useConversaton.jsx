@@ -18,6 +18,7 @@ const useConversation = () => {
             }
             setConversations(data);
         }).catch(error => {
+            if(error.response.data.error === "Unauthorized. NO TOKEN PROVIED!") 
             toast.error(error.response.data.error);
         }).finally(() => {
             setLoading(false);
