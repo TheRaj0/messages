@@ -21,7 +21,7 @@ const useConversation = () => {
             if(error.response.data.error === "Unauthorized. NO TOKEN PROVIED!")
             {
                 localStorage.removeItem("user")
-                document.location.reload()
+                Location.reload()
             }
             toast.error(error.response.data.error);
         }).finally(() => {
