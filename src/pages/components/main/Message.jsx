@@ -17,7 +17,10 @@ const Message = ({message}) => {
         {isOnline && <div className='absolute top-0 right-0 w-2 h-2 rounded-full bg-green-500'></div>}
       </div>
       <div>
-        <p className={`${isOur ? ' rounded-l-xl bg-blue-500' : 'rounded-r-xl bg-slate-500'} rounded-b-xl p-2 w-full`} style='max-width:67vw; word-wrap:break-word'>
+        <p
+          className={`${isOur ? ' rounded-l-xl bg-blue-500' : 'rounded-r-xl bg-slate-500'} rounded-b-xl p-2 w-full`}
+          style={{ maxWidth: '67vw', wordWrap: 'break-word' }}
+        >
           {message.text}
         </p>
         <p className={`${isOur && 'text-end' } max-w-full text-xs text-slate-500`}>{new Date(message.createdAt).getHours()+':'+new Date(message.createdAt).getMinutes()+' - '+new Date(message.createdAt).toLocaleDateString()}</p>
