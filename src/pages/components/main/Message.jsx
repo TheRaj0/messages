@@ -2,6 +2,8 @@ import React, { useContext } from 'react'
 import {AuthContext} from '../../../contexs/authContext'
 import { ConversationContext } from '../../../contexs/conversationContext';
 import {SocketContext} from '../../../contexs/socketContext'
+import ProfileImg from '../ProfileImg'
+
 const Message = ({message}) => {
   const {user} = useContext(AuthContext);
   const {selectedConversation} = useContext(ConversationContext);
@@ -13,7 +15,7 @@ const Message = ({message}) => {
   return (
     <div className={`${isOur ? 'flex-row-reverse ml-auto' : ''} mb-2 flex gap-2 max-w-[70%]`}>
       <div className='relative'>
-        <img className='w-8 h-8 min-w-8' src={isOur ? user.profilePicture : profilePic} alt="" />
+        <ProfileImg src={profilePic}/>
         {isOnline && <div className='absolute top-0 right-0 w-2 h-2 rounded-full bg-green-500'></div>}
       </div>
       <div>

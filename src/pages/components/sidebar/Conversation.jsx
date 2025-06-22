@@ -1,6 +1,7 @@
-import React, { useContext } from 'react'
+import { useContext } from 'react'
 import { ConversationContext } from '../../../contexs/conversationContext';
 import {SocketContext} from '../../../contexs/socketContext'
+import ProfileImg from '../ProfileImg';
 
 const Conversation = ({conversation}) => {
   const {setSelectedConversation, selectedConversation} = useContext(ConversationContext);
@@ -11,7 +12,7 @@ const Conversation = ({conversation}) => {
     <>
         <div onClick={() => setSelectedConversation(conversation)} className={'hover:bg-blue-500 flex p-2 rounded-md items-center gap-1 text-white ' + (isSelected && 'bg-blue-500')}>
             <div className='relative'>
-              <img className='w-8 ' src={conversation.profilePicture} alt="profile picture" />
+              <ProfileImg src={conversation.profilePicture}/> 
               {isOnline && <div className='absolute top-0 right-0 w-2 h-2 rounded-full bg-green-500'></div>}
             </div>
             <h4 className='overflow-hidden whitespace-nowrap'>

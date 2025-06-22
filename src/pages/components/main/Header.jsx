@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import { ConversationContext } from '../../../contexs/conversationContext';
+import ProfileImg from '../ProfileImg'
 
 const Header = () => {
   const {selectedConversation, setSelectedConversation, setMessages} = useContext(ConversationContext);
@@ -12,7 +13,7 @@ const Header = () => {
     <div className='flex items-center justify-between border-b border-slate-500 px-4 py-2 text-white'>
           <span className='text-slate-400'>To: </span> 
           <span className='flex gap-1 items-center'>
-            <img className='w-8' src={selectedConversation.profilePicture} alt="profile picture" />
+            <ProfileImg src={selectedConversation.profilePicture}/>
             {selectedConversation.fullName}
           </span>
           <button onClick={handleClick}>
