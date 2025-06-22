@@ -19,7 +19,7 @@ const Messages = () => {
   return (
     <div ref={ref} className='overflow-auto p-4 w-full text-white flex-grow'>
       {messages.map((m, i) => (
-        <Message message={m} key={i}/>
+        <Message message={m} key={m._id}/>
       ))}
       {(!loading && !messages?.length) && (
         <p className='w-full text-center text-sm text-slate-500'>Send a message to start conversation</p>
