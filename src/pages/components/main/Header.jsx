@@ -10,7 +10,7 @@ const Header = () => {
     setMessages([]);
   }
   return (
-    <div className='flex items-center justify-between border-b border-slate-500 px-4 py-2 text-white'>
+    <div key={selectedConversation._id} className='flex items-center justify-between border-b border-slate-500 px-4 py-2 text-white'>
           <span className='text-slate-400'>To: </span> 
           <span className='flex gap-1 items-center'>
             <ProfileImg src={selectedConversation.profilePicture}/>
