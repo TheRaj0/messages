@@ -19,7 +19,7 @@ const Home = () => {
       <div className="w-full h-full block sm:hidden">
         {selectedConversation?._id ? <Main /> : <Sidebar />}
       </div>
-      <div className="w-3/4 max-w-[750px] h-4/5 hidden sm:flex overflow-hidden rounded-xl">
+      <div className="w-full h-full hidden sm:flex">
         <Sidebar />
         <Main />
       </div>
