@@ -17,7 +17,7 @@ const Messages = () => {
   }, [messages])
 
   return (
-    <div ref={ref} className='overflow-auto p-4 w-full text-white flex-grow'>
+    <div ref={ref} className='overflow-auto p-4 w-full text-white flex-grow [scrollbar-width:none] [&::-webkit-scrollbar]:hidden'>
       {messages.map((m, i) => (
         <Message message={m} key={m._id}/>
       ))}
