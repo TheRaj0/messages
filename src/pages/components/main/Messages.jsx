@@ -22,7 +22,7 @@ const Messages = () => {
         <Message message={m} key={m._id}/>
       ))}
       {(!loading && !messages?.length) && (
-        <p className='w-full text-center text-sm text-sky-300'>Send a message to start conversation</p>
+        <p className='w-full text-center text-sm text-gray-300'>Send a message to start conversation</p>
       )}
       {loading && (
         <>
