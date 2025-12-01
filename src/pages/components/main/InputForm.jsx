@@ -10,7 +10,7 @@ const InputForm = () => {
     setText('');
   }
   return (
-    <div className='sticky bottom-0 p-2 w-full bg-slate-700'>
+    <div className='sticky bottom-0 p-2 w-full'>
       <form onSubmit={handleSubmit} className='flex gap-2 items-center justify-center w-full'>
         <input 
             value={text}
