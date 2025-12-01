@@ -19,9 +19,9 @@ const Main = () => {
       <div className='flex w-full h-full sm:w-2/3 items-center justify-center bg-[url("https://theraj0.github.io/portfolio/background.jpg")] bg-cover bg-no-repeat bg-center'>
         <div>
           <p className='text-2xl text-white'>
-            Hello <span className='text-sky-600'>{user.fullName}</span>
+            Hello <span className='text-teal-500'>{user.fullName}</span>
           </p>
-          <p className='text-sm text-sky-300 text-center'>Select a conversation from left</p>
+          <p className='text-sm text-teal-400 text-center'>Select a conversation from left</p>
         </div>
       </div>
     }
