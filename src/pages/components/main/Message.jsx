@@ -25,7 +25,7 @@ const Message = ({message}) => {
         >
           {message.text}
         </p>
-        <p className={`${isOur && 'text-end' } max-w-full text-xs text-sky-700`}>{new Date(message.createdAt).getHours()+':'+new Date(message.createdAt).getMinutes()+' - '+new Date(message.createdAt).toLocaleDateString()}</p>
+        <p className={`${isOur && 'text-end' } max-w-full text-xs text-sky-300`}>{new Date(message.createdAt).getHours()+':'+new Date(message.createdAt).getMinutes()+' - '+new Date(message.createdAt).toLocaleDateString()}</p>
       </div>
     </div>
   )
