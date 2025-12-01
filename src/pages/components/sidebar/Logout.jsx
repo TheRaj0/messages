@@ -4,7 +4,7 @@ import useLogout from '../../../hooks/useLogout';
 const Logout = () => {
     const [loading, logout] = useLogout();
   return (
-    <div className=' px-2 py-5 border-t border-slate-500 sticky bottom-0 text-white bg-slate-600 w-full'>
+    <div className=' px-2 py-5 sticky bottom-0 text-white bg-slate-600 w-full'>
       <button className=''  disabled={loading} onClick={logout}>
         {loading ? <div className='animate-spin h-5 w-5 rounded-full border-4 border-slate-400 border-r-slate-200 mx-auto'/> : 
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
