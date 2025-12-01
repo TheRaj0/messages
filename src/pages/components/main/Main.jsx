@@ -16,7 +16,7 @@ const Main = () => {
           <Messages />
           <InputForm />
       </div> : 
-      <div className='flex w-full h-full sm:w-2/3 items-center justify-center bg-[url("https://theraj0.github.io/portfolio/background.jpg")] bg-cover bg-no-repeat bg-center'>
+      <div className='flex w-full h-full sm:w-2/3 items-center justify-center bg-[url("/background.jpg")] bg-cover bg-no-repeat bg-center'>
         <div>
           <p className='text-2xl text-white'>
             Hello <span className='text-blue-500'>{user.fullName}</span>
