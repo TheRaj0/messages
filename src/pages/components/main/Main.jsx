@@ -11,7 +11,7 @@ const Main = () => {
   return (
     <>
     {selectedConversation?._id ? 
-      <div className='flex flex-col w-full h-full sm:w-2/3 bg-[url("https://theraj0.github.io/portfolio/background.jpg")] bg-cover bg-no-repeat bg-center'>
+      <div className='flex flex-col w-full h-full sm:w-2/3 bg-[url("/background.jpg")] bg-cover bg-no-repeat bg-center'>
           <Header />
           <Messages />
           <InputForm />
